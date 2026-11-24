@@ -131,23 +131,23 @@ export default function HeroSection() {
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
               </Link>
 
-              <div className="flex items-center gap-2.5 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
                 <a
                   href={generatePhoneLink()}
-                  className="flex-1 sm:flex-initial bg-navy-800 hover:bg-navy-700 text-white border border-navy-700 font-bold py-3.5 sm:py-4 px-5 sm:px-7 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 text-xs sm:text-sm"
+                  className="w-full sm:w-auto bg-navy-800 hover:bg-navy-700 text-white border border-navy-700 font-extrabold py-3.5 sm:py-4 px-6 sm:px-7 rounded-2xl shadow-md transition-all duration-200 flex items-center justify-center gap-2 text-xs sm:text-sm whitespace-nowrap"
                 >
-                  <Phone className="w-4 h-4 text-accent-400" />
-                  <span>Call Now</span>
+                  <Phone className="w-4 h-4 text-accent-400 shrink-0" />
+                  <span>Call: {BUSINESS_INFO.phoneDisplay}</span>
                 </a>
 
                 <a
                   href={generateWhatsAppLink()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl shadow-md active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 text-xs sm:text-sm"
+                  className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 sm:py-4 px-6 rounded-2xl shadow-md active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 text-xs sm:text-sm whitespace-nowrap"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white" />
-                  <span>WhatsApp</span>
+                  <MessageCircle className="w-4 h-4 fill-white shrink-0" />
+                  <span>WhatsApp Booking</span>
                 </a>
               </div>
             </div>

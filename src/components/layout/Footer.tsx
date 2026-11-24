@@ -47,18 +47,18 @@ export default function Footer() {
           <div className="flex items-center gap-3 w-full lg:w-auto">
             <a
               href={generatePhoneLink()}
-              className="flex-1 sm:flex-initial bg-white hover:bg-coolgray-100 text-navy-900 font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2"
+              className="flex-1 sm:flex-initial bg-white hover:bg-coolgray-100 text-navy-900 font-black py-3 px-5 sm:px-6 rounded-xl text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2 whitespace-nowrap min-w-[170px]"
             >
-              <Phone className="w-4 h-4 text-accent-500" />
-              <span>{BUSINESS_INFO.phoneDisplay}</span>
+              <Phone className="w-4 h-4 text-accent-500 shrink-0" />
+              <span className="tracking-tight">{BUSINESS_INFO.phoneDisplay}</span>
             </a>
             <a
               href={generateWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2"
+              className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-5 sm:px-6 rounded-xl text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2 whitespace-nowrap"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
+              <MessageCircle className="w-4 h-4 fill-white shrink-0" />
               <span>WhatsApp</span>
             </a>
           </div>

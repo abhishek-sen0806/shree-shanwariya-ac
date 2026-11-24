@@ -100,11 +100,9 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Navigation Bar */}
-      <div className={`transition-all duration-200 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-md py-3 sm:py-3.5' 
-          : 'bg-white py-3 sm:py-4 border-b border-coolgray-200/80'
+      {/* Main Navigation Bar - Solid White to prevent any blurriness */}
+      <div className={`transition-all duration-200 bg-white border-b border-coolgray-200 ${
+        scrolled ? 'shadow-md py-3' : 'py-3.5 sm:py-4'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
