@@ -60,10 +60,11 @@ export default function Header() {
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about-us' },
     { label: 'Services', href: '/#services', isDropdown: true },
-    { label: 'Brands', href: '/#brands' },
-    // { label: 'Indore Coverage', href: '/#service-areas' },
+    { label: 'Cost Estimator', href: '/#cost-estimator' },
+    { label: 'AC Calculator', href: '/#ac-calculator' },
+    { label: 'AMC Plans', href: '/#amc-plans' },
+    { label: 'Reviews', href: '/#reviews' },
     { label: 'Contact', href: '/contact-us' },
   ];
 

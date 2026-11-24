@@ -3,6 +3,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import MobileActionBar from '@/components/common/MobileActionBar';
 import FloatingWhatsApp from '@/components/common/FloatingWhatsApp';
+import GlobalBookingTrigger from '@/components/common/GlobalBookingTrigger';
 import { getLocalBusinessSchema, getWebSiteSchema } from '@/lib/schema';
 import { constructMetadata } from '@/lib/seo';
 import './globals.css';
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <GlobalBookingTrigger />
         <MobileActionBar />
       </body>
     </html>

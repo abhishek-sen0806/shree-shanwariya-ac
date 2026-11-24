@@ -19,12 +19,14 @@ import {
 } from 'lucide-react';
 import { BUSINESS_INFO } from '@/data/business';
 import { generatePhoneLink, generateWhatsAppLink } from '@/lib/utils';
+import BookingWizardModal from '@/components/common/BookingWizardModal';
 
 export default function HeroSection() {
   const [activeMode, setActiveMode] = useState<'cooling' | 'heating' | 'purification'>('cooling');
+  const [isWizardOpen, setIsWizardOpen] = useState(false);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-900 text-white pt-6 pb-16 sm:pt-10 sm:pb-20 lg:pt-16 lg:pb-28 border-b border-navy-800">
+    <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-900 text-white min-h-[calc(100vh-80px)] flex flex-col justify-center pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 border-b border-navy-800">
 
       {/* Dynamic Animated Ambient Lights */}
       <div className={`absolute top-10 left-1/4 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] rounded-full blur-[110px] sm:blur-[140px] pointer-events-none transition-colors duration-700 ${activeMode === 'cooling' ? 'bg-electric-500/20' : activeMode === 'heating' ? 'bg-accent-500/20' : 'bg-emerald-500/20'
@@ -119,13 +121,14 @@ export default function HeroSection() {
 
             {/* Call To Actions */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1 sm:pt-2">
-              <Link
-                href="/contact-us"
-                className="w-full sm:w-auto bg-electric-500 hover:bg-electric-600 text-white font-extrabold py-3.5 sm:py-4 px-7 sm:px-8 rounded-2xl shadow-glow-electric active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 text-sm group"
+              <button
+                type="button"
+                onClick={() => setIsWizardOpen(true)}
+                className="w-full sm:w-auto bg-electric-500 hover:bg-electric-600 text-white font-black py-3.5 sm:py-4 px-7 sm:px-8 rounded-2xl shadow-glow-electric active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 text-sm group"
               >
-                <span>Book Service Now</span>
+                <span>Book Service</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-              </Link>
+              </button>
 
               <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
                 <a
@@ -295,6 +298,12 @@ export default function HeroSection() {
 
         </div>
       </div>
+
+      {/* 1-Min WhatsApp Booking Wizard Modal */}
+      <BookingWizardModal
+        isOpen={isWizardOpen}
+        onClose={() => setIsWizardOpen(false)}
+      />
     </section>
   );
 }
