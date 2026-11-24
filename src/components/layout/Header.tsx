@@ -270,7 +270,7 @@ export default function Header() {
                     className="w-full flex justify-between items-center px-3.5 py-3 text-sm font-bold text-navy-900 hover:bg-coolgray-50 bg-coolgray-50/50"
                   >
                     <div className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-electric-600" />
+                      {/* <Sparkles className="w-4 h-4 text-electric-600" /> */}
                       <span>Our Services (AC, Geyser, RO)</span>
                     </div>
                     <ChevronDown className={`w-4 h-4 text-coolgray-500 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
