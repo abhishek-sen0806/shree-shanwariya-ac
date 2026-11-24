@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { 
-  Phone, 
-  MessageCircle, 
-  ShieldCheck, 
-  Clock, 
-  MapPin, 
+import {
+  Phone,
+  MessageCircle,
+  ShieldCheck,
+  Clock,
+  MapPin,
   ChevronRight,
   Wind,
   Flame,
@@ -25,28 +25,26 @@ export default function HeroSection() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-900 text-white pt-6 pb-16 sm:pt-10 sm:pb-20 lg:pt-16 lg:pb-28 border-b border-navy-800">
-      
+
       {/* Dynamic Animated Ambient Lights */}
-      <div className={`absolute top-10 left-1/4 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] rounded-full blur-[110px] sm:blur-[140px] pointer-events-none transition-colors duration-700 ${
-        activeMode === 'cooling' ? 'bg-electric-500/20' : activeMode === 'heating' ? 'bg-accent-500/20' : 'bg-emerald-500/20'
-      }`} />
+      <div className={`absolute top-10 left-1/4 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] rounded-full blur-[110px] sm:blur-[140px] pointer-events-none transition-colors duration-700 ${activeMode === 'cooling' ? 'bg-electric-500/20' : activeMode === 'heating' ? 'bg-accent-500/20' : 'bg-emerald-500/20'
+        }`} />
       <div className="absolute bottom-10 right-10 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-electric-600/10 rounded-full blur-[100px] sm:blur-[130px] pointer-events-none" />
 
       {/* Subtle Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#1D3B6F_1px,transparent_1px)] [background-size:20px_20px] opacity-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Top Service Mode Selector Tabs - Mobile Horizontal Scroll/Grid */}
         <div className="flex justify-center mb-6 sm:mb-8">
           <div className="inline-flex w-full sm:w-auto p-1 sm:p-1.5 rounded-2xl bg-navy-900/90 border border-navy-700/80 backdrop-blur-md shadow-2xl justify-between sm:justify-start">
             <button
               onClick={() => setActiveMode('cooling')}
-              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${
-                activeMode === 'cooling' 
-                  ? 'bg-electric-500 text-white shadow-glow-electric' 
-                  : 'text-coolgray-300 hover:text-white'
-              }`}
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${activeMode === 'cooling'
+                ? 'bg-electric-500 text-white shadow-glow-electric'
+                : 'text-coolgray-300 hover:text-white'
+                }`}
             >
               <Snowflake className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span>AC Cooling</span>
@@ -54,11 +52,10 @@ export default function HeroSection() {
 
             <button
               onClick={() => setActiveMode('heating')}
-              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${
-                activeMode === 'heating' 
-                  ? 'bg-accent-500 text-white shadow-glow-accent' 
-                  : 'text-coolgray-300 hover:text-white'
-              }`}
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${activeMode === 'heating'
+                ? 'bg-accent-500 text-white shadow-glow-accent'
+                : 'text-coolgray-300 hover:text-white'
+                }`}
             >
               <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span>Geyser</span>
@@ -66,11 +63,10 @@ export default function HeroSection() {
 
             <button
               onClick={() => setActiveMode('purification')}
-              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${
-                activeMode === 'purification' 
-                  ? 'bg-emerald-600 text-white shadow-lg' 
-                  : 'text-coolgray-300 hover:text-white'
-              }`}
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 ${activeMode === 'purification'
+                ? 'bg-emerald-600 text-white shadow-lg'
+                : 'text-coolgray-300 hover:text-white'
+                }`}
             >
               <Droplets className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span>RO Pure</span>
@@ -79,14 +75,14 @@ export default function HeroSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           {/* Left Column: Headlines & Call to Actions */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
-            
+
             {/* Location Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-800/90 border border-electric-500/30 text-electric-300 text-[11px] sm:text-xs font-semibold shadow-inner">
               <span className="w-2 h-2 rounded-full bg-electric-400 animate-ping" />
-              <span>Indore Premier Appliance Hub • MR 10 Square</span>
+              <span>Indore Premier Appliance Hub</span>
             </div>
 
             {/* Dynamic Main Headline */}
@@ -190,13 +186,13 @@ export default function HeroSection() {
           {/* Right Column: Interactive Diagnostic Appliance Card */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              
+
               {/* Outer Glow */}
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-electric-500 via-accent-500 to-electric-600 opacity-25 blur-xl pointer-events-none" />
 
               {/* Main Futuristic Card */}
               <div className="relative rounded-3xl bg-gradient-to-b from-navy-900/95 to-navy-950/95 p-5 sm:p-7 border border-navy-700/80 shadow-2xl backdrop-blur-xl">
-                
+
                 {/* Header status strip */}
                 <div className="flex items-center justify-between border-b border-navy-800 pb-3 sm:pb-4 mb-4 sm:mb-5">
                   <div className="flex items-center gap-2">
@@ -212,7 +208,7 @@ export default function HeroSection() {
 
                 {/* Animated AC Blower Visual */}
                 <div className="relative p-4 sm:p-5 rounded-2xl bg-navy-950/90 border border-navy-800 overflow-hidden mb-4 sm:mb-5">
-                  
+
                   {/* Subtle Airflow streams */}
                   <div className="absolute top-0 left-0 right-0 h-full flex flex-col justify-around opacity-40 pointer-events-none">
                     <div className="h-0.5 bg-gradient-to-r from-transparent via-electric-400 to-transparent ac-airflow-line" />
@@ -283,8 +279,8 @@ export default function HeroSection() {
                 {/* Bottom Direct Coordination */}
                 <div className="mt-4 pt-3 border-t border-navy-800 flex items-center justify-between text-xs">
                   <span className="text-coolgray-400 text-[11px]">Workshop Hotline:</span>
-                  <a 
-                    href={generatePhoneLink()} 
+                  <a
+                    href={generatePhoneLink()}
                     className="text-white font-extrabold hover:text-electric-400 transition-colors flex items-center gap-1.5"
                   >
                     <Phone className="w-3 h-3 text-accent-400" />

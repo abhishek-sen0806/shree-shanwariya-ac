@@ -3,12 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { 
-  Phone, 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Clock, 
+import AppLogo from '@/components/common/AppLogo';
+import {
+  Phone,
+  Menu,
+  X,
+  ChevronDown,
+  Clock,
   MapPin,
   Wind,
   Flame,
@@ -62,7 +63,7 @@ export default function Header() {
     { label: 'About Us', href: '/about-us' },
     { label: 'Services', href: '/#services', isDropdown: true },
     { label: 'Brands', href: '/#brands' },
-    { label: 'Indore Coverage', href: '/#service-areas' },
+    // { label: 'Indore Coverage', href: '/#service-areas' },
     { label: 'Contact', href: '/contact-us' },
   ];
 
@@ -82,16 +83,16 @@ export default function Header() {
             </span>
           </div>
           <div className="flex items-center gap-4 font-semibold">
-            <a 
-              href={generatePhoneLink()} 
+            <a
+              href={generatePhoneLink()}
               className="text-white hover:text-electric-400 transition-colors flex items-center gap-1.5"
             >
               <Phone className="w-3 h-3 text-accent-400" />
               {BUSINESS_INFO.phoneDisplay}
             </a>
             <span className="text-navy-700">|</span>
-            <a 
-              href={`mailto:${BUSINESS_INFO.email}`} 
+            <a
+              href={`mailto:${BUSINESS_INFO.email}`}
               className="hover:text-electric-400 transition-colors text-coolgray-300 font-normal"
             >
               {BUSINESS_INFO.email}
@@ -101,24 +102,13 @@ export default function Header() {
       </div>
 
       {/* Main Navigation Bar - Solid White to prevent any blurriness */}
-      <div className={`transition-all duration-200 bg-white border-b border-coolgray-200 ${
-        scrolled ? 'shadow-md py-3' : 'py-3.5 sm:py-4'
-      }`}>
+      <div className={`transition-all duration-200 bg-white border-b border-coolgray-200 ${scrolled ? 'shadow-md py-3' : 'py-3.5 sm:py-4'
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-navy-800 to-navy-950 flex items-center justify-center text-white shadow-md border border-navy-700/50 group-hover:border-electric-500/50 transition-colors shrink-0">
-              <Wind className="w-5 h-5 sm:w-6 sm:h-6 text-electric-400 group-hover:rotate-12 transition-transform duration-300" />
-            </div>
-            <div>
-              <span className="text-base sm:text-xl font-extrabold tracking-tight text-navy-900 block leading-tight">
-                Shri Sanwariya
-              </span>
-              <span className="text-[10px] sm:text-xs font-bold tracking-wider uppercase text-electric-600 block">
-                Air Conditioner & Appliance Care
-              </span>
-            </div>
+          <Link href="/">
+            <AppLogo size="md" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -126,16 +116,15 @@ export default function Header() {
             {navLinks.map((link) => {
               if (link.isDropdown) {
                 return (
-                  <div 
-                    key={link.label} 
+                  <div
+                    key={link.label}
                     className="relative"
                     onMouseEnter={() => setServicesDropdown(true)}
                     onMouseLeave={() => setServicesDropdown(false)}
                   >
-                    <button 
-                      className={`flex items-center gap-1 text-sm font-semibold transition-colors py-2 ${
-                        pathname.startsWith('/services') ? 'text-electric-600' : 'text-coolgray-800 hover:text-navy-900'
-                      }`}
+                    <button
+                      className={`flex items-center gap-1 text-sm font-semibold transition-colors py-2 ${pathname.startsWith('/services') ? 'text-electric-600' : 'text-coolgray-800 hover:text-navy-900'
+                        }`}
                       aria-expanded={servicesDropdown}
                     >
                       Services
@@ -173,11 +162,10 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`text-sm font-semibold transition-colors ${
-                    isActive 
-                      ? 'text-electric-600' 
-                      : 'text-coolgray-800 hover:text-navy-900'
-                  }`}
+                  className={`text-sm font-semibold transition-colors ${isActive
+                    ? 'text-electric-600'
+                    : 'text-coolgray-800 hover:text-navy-900'
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -187,13 +175,13 @@ export default function Header() {
 
           {/* Desktop Right Action Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
+            {/* <a
               href={generatePhoneLink()}
               className="flex items-center gap-2 text-navy-900 hover:text-electric-600 px-3 py-2 text-sm font-bold transition-colors"
             >
               <Phone className="w-4 h-4 text-accent-500" />
               <span>{BUSINESS_INFO.phoneDisplay}</span>
-            </a>
+            </a> */}
             <Link
               href="/contact-us"
               className="bg-navy-900 hover:bg-navy-800 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all duration-200 border border-navy-700/50 flex items-center gap-2"
@@ -228,7 +216,7 @@ export default function Header() {
       {isOpen && (
         <div className="lg:hidden fixed inset-0 top-[60px] z-50 bg-navy-950/40 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white h-[calc(100vh-60px)] flex flex-col justify-between overflow-y-auto shadow-2xl border-t border-coolgray-100 p-5">
-            
+
             {/* Top Quick Status Pill */}
             <div className="space-y-4">
               <div className="p-3.5 rounded-2xl bg-gradient-to-r from-navy-950 to-navy-900 text-white flex items-center justify-between shadow-md">
@@ -245,9 +233,8 @@ export default function Header() {
               <nav className="space-y-1">
                 <Link
                   href="/"
-                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-bold transition-colors ${
-                    pathname === '/' ? 'bg-coolgray-100 text-electric-600' : 'text-navy-900 hover:bg-coolgray-50'
-                  }`}
+                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-bold transition-colors ${pathname === '/' ? 'bg-coolgray-100 text-electric-600' : 'text-navy-900 hover:bg-coolgray-50'
+                    }`}
                 >
                   <span>Home</span>
                   <ChevronRight className="w-4 h-4 text-coolgray-400" />
@@ -255,9 +242,8 @@ export default function Header() {
 
                 <Link
                   href="/about-us"
-                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-bold transition-colors ${
-                    pathname === '/about-us' ? 'bg-coolgray-100 text-electric-600' : 'text-navy-900 hover:bg-coolgray-50'
-                  }`}
+                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-bold transition-colors ${pathname === '/about-us' ? 'bg-coolgray-100 text-electric-600' : 'text-navy-900 hover:bg-coolgray-50'
+                    }`}
                 >
                   <span>About Us</span>
                   <ChevronRight className="w-4 h-4 text-coolgray-400" />
@@ -310,9 +296,8 @@ export default function Header() {
 
                 <Link
                   href="/contact-us"
-                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-bold transition-colors ${
-                    pathname === '/contact-us' ? 'bg-coolgray-100 text-electric-600' : 'text-navy-900 hover:bg-coolgray-50'
-                  }`}
+                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-bold transition-colors ${pathname === '/contact-us' ? 'bg-coolgray-100 text-electric-600' : 'text-navy-900 hover:bg-coolgray-50'
+                    }`}
                 >
                   <span>Contact Us</span>
                   <ChevronRight className="w-4 h-4 text-coolgray-400" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import AppLogo from '@/components/common/AppLogo';
 import { 
   Phone, 
   Mail, 
@@ -69,18 +70,8 @@ export default function Footer() {
           
           {/* Col 1: Business Profile (5 Cols) */}
           <div className="lg:col-span-5 space-y-5">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center text-white border border-electric-500/40 shadow-glow-electric group-hover:scale-105 transition-transform">
-                <Wind className="w-6 h-6 text-electric-400 animate-wind" />
-              </div>
-              <div>
-                <span className="text-xl font-extrabold text-white block leading-tight">
-                  Shri Sanwariya
-                </span>
-                <span className="text-xs text-electric-400 font-bold uppercase tracking-wider block">
-                  Air Conditioner & Appliance Care
-                </span>
-              </div>
+            <Link href="/">
+              <AppLogo size="lg" lightMode={true} />
             </Link>
             
             <p className="text-sm text-coolgray-300 leading-relaxed">
