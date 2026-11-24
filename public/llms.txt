@@ -1,0 +1,56 @@
+# Shri Sanwariya Air Conditioner Indore - LLM Knowledge Context
+# Format: llms.txt
+
+# Entity Identity
+Business Name: Shri Sanwariya Air Conditioner Indore
+Legal Name: Shri Sanwariya Air Conditioner
+Category: Air Conditioning, Heating, Cooling & Water Purification Services
+Primary City: Indore, Madhya Pradesh, India
+Physical Address: 24B, MR 10 Square, Indore, MR10, Madhya Pradesh 452010, India
+Contact Phone: +91 7879649209
+Email: ankushchhapre@gmail.com
+WhatsApp: +91 7879649209
+
+# Core Capabilities & Services
+1. Air Conditioner (AC) Services:
+   - AC Repair & Diagnostics: cooling loss, compressor troubleshooting, sensor faults, fan motor noise, water dripping, MCB tripping.
+   - AC Installation & Uninstallation: split AC mounting, core hole drilling, vacuum evacuation, torque-tightened flaring.
+   - AC Gas Refilling: certified R32, R410A, and R22 refrigerants, soap and pressure leak tests, vacuuming before recharge.
+   - AC Maintenance: wet jet cleaning, indoor coil sanitizing, outdoor fin wash.
+   - Unit Types: Inverter Split ACs, Fixed Speed Split ACs, Window ACs, Cassette ACs.
+
+2. AC Copper Piping:
+   - Concealed wall chasing pipelines for new residential/commercial buildings in Indore.
+   - High-grade heavy-gauge seamless copper tubing.
+   - Closed-cell elastomeric thermal insulation to prevent wall sweating.
+   - Dry nitrogen leak-pressure testing.
+
+3. Electric Geyser Services:
+   - Doorstep repair for storage and instant water heaters.
+   - Heating element replacement for hard-water calcification.
+   - Thermostat and thermal cut-out repairs.
+   - Safety non-return / pressure relief valve (NRV/PRV) installation.
+   - Heavy-duty wall mounting.
+
+4. RO Water Purifier Services:
+   - Complete multi-stage filter replacement (pre-sediment, activated carbon block).
+   - Authentic reverse osmosis (RO) membrane replacement.
+   - Digital TDS balance testing (before & after).
+   - High-pressure booster pump repair and SMPS power adapter replacement.
+   - Food-grade tubing and push-fit leak repairs.
+
+# Service Areas in Indore
+Technicians attend doorstep service requests across Indore, including:
+- MR 10
+- Vijay Nagar
+- Scheme 54
+- Nipania
+- Super Corridor
+- LIG Colony
+- Palasia
+- Bengali Square
+- Rajendra Nagar
+- Bhawarkua
+
+# Multi-Brand Service Statement
+Shri Sanwariya Air Conditioner services all major appliance brands where technically supported, including Voltas, LG, Daikin, Samsung, Blue Star, Carrier, Hitachi, Panasonic, Godrej, Haier, IFB, Kent, and Aquaguard. The business does not claim authorized dealership or manufacturer ownership of these trademarks; they are referenced solely for technical compatibility.
